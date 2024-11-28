@@ -3,7 +3,6 @@
 
 @function get-color($type, $level) {
     @if map.has-key($colors, $type) and (map.has-key(map.get($colors, $type), $level)){
-      @warn '#{map.get(map.get($colors, $type), $level)}';
       @return map.get(map.get($colors, $type), $level);
     }
     @else{
